@@ -1,4 +1,13 @@
 {
-  "description": "description",
-  "title": "title"
+  "card": {
+    "description": "Choose flow",
+    "title": "User flows"
+  },
+  "flows": {
+    "login": "Login"
+  },
+  "metadata": {
+    "description": "kratos user flows introduction",
+    "title": "Flows"
+  }
 }

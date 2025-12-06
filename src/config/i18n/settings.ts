@@ -1,4 +1,4 @@
-import { I18NConfig } from "next/dist/server/config-shared";
+import type { I18NConfig } from "next/dist/server/config-shared";
 
 export const fallbackLng = "en";
 export const languages = [fallbackLng, "ru"];

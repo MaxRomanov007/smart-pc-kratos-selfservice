@@ -1,7 +1,7 @@
 import {getT} from "@/utils/i18n";
 import LinkBase from "@/components/i18n/Link/LinkBase";
-import {fallbackLng} from "@/config/i18n/settings";
-import {FC, PropsWithChildren } from "react";
+import { fallbackLng } from "@/config/i18n/settings";
+import type { FC, PropsWithChildren } from "react";
 
 interface LinkProps extends PropsWithChildren {
     href?: string;

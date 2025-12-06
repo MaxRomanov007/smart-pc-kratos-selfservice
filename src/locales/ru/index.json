@@ -1,4 +1,13 @@
 {
-  "description": "TODO: ru - translate \"description\" in \"index\"",
-  "title": "TODO: ru - translate \"title\" in \"index\""
+  "card": {
+    "description": "TODO: ru - translate \"card.description\" in \"index\"",
+    "title": "TODO: ru - translate \"card.title\" in \"index\""
+  },
+  "flows": {
+    "login": "TODO: ru - translate \"flows.login\" in \"index\""
+  },
+  "metadata": {
+    "description": "TODO: ru - translate \"metadata.description\" in \"index\"",
+    "title": "TODO: ru - translate \"metadata.title\" in \"index\""
+  }
 }
