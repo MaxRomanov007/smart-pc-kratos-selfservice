@@ -1,12 +1,11 @@
-import type { FC } from "react";
-import { Grid, GridItem, type GridProps, HStack, Icon } from "@chakra-ui/react";
+import { Grid, GridItem, HStack, Icon } from "@chakra-ui/react";
 import FullLogo from "@/components/icons/logo/FullLogo";
 import { ColorModeButton } from "@/components/ui/chakra/color-mode";
 import LocalizationSelect from "@/components/i18n/LocalizationSelect";
 
-const Header: FC<GridProps> = (props) => {
+export default function Header() {
   return (
-    <Grid w="full" templateColumns="1fr auto 1fr" {...props}>
+    <Grid w="full" templateColumns="1fr auto 1fr">
       <GridItem />
 
       <GridItem>
@@ -23,11 +22,9 @@ const Header: FC<GridProps> = (props) => {
       <GridItem>
         <HStack justifySelf="end" alignSelf="center" m={4} gap={4}>
           <ColorModeButton />
-          <LocalizationSelect/>
+          <LocalizationSelect />
         </HStack>
       </GridItem>
     </Grid>
   );
-};
-
-export default Header;
+}

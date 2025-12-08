@@ -1,5 +1,5 @@
 import { Button, type ButtonProps } from "@chakra-ui/react";
-import { Link } from "@/components/i18n/Link";
+import { Link } from "@/i18n/navigation";
 
 interface LinkButtonProps extends ButtonProps {
   href: string;

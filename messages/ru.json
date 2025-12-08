@@ -1,0 +1,21 @@
+{
+  "index-page": {
+    "card": {
+      "description": "Выберите пользовательский поток",
+      "title": "Потоки"
+    },
+    "flows": {
+      "login": "Логин"
+    },
+    "metadata": {
+      "description": "Попробуйте потоки пользователя",
+      "title": "Полина, соси"
+    }
+  },
+  "login-flow": {
+    "metadata": {
+      "description": "TODO: ru - translate \"metadata.description\" in \"login-flow\"",
+      "title": "TODO: ru - translate \"metadata.title\" in \"login-flow\""
+    }
+  }
+}

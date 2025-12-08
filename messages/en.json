@@ -1,0 +1,21 @@
+{
+  "index-page": {
+    "card": {
+      "description": "User flows",
+      "title": "Choose user flow"
+    },
+    "flows": {
+      "login": "Login"
+    },
+    "metadata": {
+      "description": "introduction of user flows",
+      "title": "Polina lox"
+    }
+  },
+  "login-flow": {
+    "metadata": {
+      "description": "metadata.description",
+      "title": "metadata.title"
+    }
+  }
+}

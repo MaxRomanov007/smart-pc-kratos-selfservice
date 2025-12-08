@@ -1,10 +1,20 @@
 import { Card, Stack } from "@chakra-ui/react";
-import { getT } from "@/utils/i18n";
 import LinkButton from "@/components/ui/buttons/LinkButton";
 import { PAGES } from "@/shared/constants/pages";
+import { getTranslations } from "next-intl/server";
+import type { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("index-page");
+
+  return {
+    title: t("metadata.title"),
+    description: t("metadata.description"),
+  };
+}
 
 export default async function Page() {
-  const { t } = await getT("index");
+  const t = await getTranslations("index-page");
 
   return (
     <Card.Root maxW="md" w="full">
