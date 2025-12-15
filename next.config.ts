@@ -4,6 +4,12 @@ import createNextIntlPlugin from "next-intl/plugin";
 const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
+  images: {
+    remotePatterns: [
+      new URL("https://cdn.pixabay.com/**"),
+      new URL("https://lh3.googleusercontent.com/**"),
+    ]
+  }
 };
 
 const withNextIntl = createNextIntlPlugin({
@@ -11,4 +17,5 @@ const withNextIntl = createNextIntlPlugin({
     createMessagesDeclaration: "./messages/en.json"
   }
 });
+
 export default withNextIntl(nextConfig);

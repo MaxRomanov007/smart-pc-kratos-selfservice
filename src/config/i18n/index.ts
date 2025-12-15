@@ -1,4 +1,4 @@
-type Locale = {
+export type Locale = {
   key: string;
   label: string;
   isDefault?: boolean;

@@ -1,21 +1,81 @@
 {
-  "index-page": {
-    "card": {
-      "description": "User flows",
-      "title": "Choose user flow"
-    },
-    "flows": {
-      "login": "Login"
-    },
-    "metadata": {
-      "description": "introduction of user flows",
-      "title": "Polina lox"
+  "pages": {
+    "index": {
+      "card": {
+        "description": "Check user flows",
+        "title": "User flows"
+      },
+      "flows": {
+        "login": "Login",
+        "logout": "Logout",
+        "recovery": "Recovery",
+        "registration": "Registration",
+        "settings": "Settings",
+        "verification": "Verification"
+      },
+      "metadata": {
+        "description": "index.metadata.description",
+        "title": "index.metadata.title"
+      }
     }
   },
-  "login-flow": {
-    "metadata": {
-      "description": "metadata.description",
-      "title": "metadata.title"
+  "components": {
+    "ory": {
+      "button": {
+        "submittingLabel": "ory.button.submittingLabel"
+      },
+      "card": {
+        "flows": {
+          "login": {
+            "footer": {
+              "linkText": "Register now",
+              "text": "Dont have an account?"
+            },
+            "header": {
+              "description": "Sign in your account",
+              "title": "Login"
+            }
+          },
+          "oAuth2Consent": {
+            "header": {
+              "description": "ory.card.flows.oAuth2Consent.header.description",
+              "title": "ory.card.flows.oAuth2Consent.header.title"
+            }
+          },
+          "recovery": {
+            "footer": {
+              "linkText": "ory.card.flows.recovery.footer.linkText",
+              "text": "ory.card.flows.recovery.footer.text"
+            },
+            "header": {
+              "description": "ory.card.flows.recovery.header.description",
+              "title": "ory.card.flows.recovery.header.title"
+            }
+          },
+          "registration": {
+            "footer": {
+              "linkText": "Login here",
+              "text": "Already have an account?"
+            },
+            "header": {
+              "description": "ory.card.flows.registration.header.description",
+              "title": "ory.card.flows.registration.header.title"
+            }
+          },
+          "settings": {
+            "header": {
+              "description": "ory.card.flows.settings.header.description",
+              "title": "ory.card.flows.settings.header.title"
+            }
+          },
+          "verification": {
+            "header": {
+              "description": "ory.card.flows.verification.header.description",
+              "title": "ory.card.flows.verification.header.title"
+            }
+          }
+        }
+      }
     }
   }
 }

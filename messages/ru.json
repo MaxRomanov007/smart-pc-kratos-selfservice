@@ -1,21 +1,86 @@
 {
-  "index-page": {
-    "card": {
-      "description": "Выберите пользовательский поток",
-      "title": "Потоки"
-    },
-    "flows": {
-      "login": "Логин"
-    },
-    "metadata": {
-      "description": "Попробуйте потоки пользователя",
-      "title": "Полина, соси"
+  "pages": {
+    "index": {
+      "card": {
+        "description": "ru:pages.index.card.description",
+        "title": "ru:pages.index.card.title"
+      },
+      "flows": {
+        "login": "ru:pages.index.flows.login",
+        "logout": "ru:pages.index.flows.logout",
+        "recovery": "ru:pages.index.flows.recovery",
+        "registration": "ru:pages.index.flows.registration",
+        "settings": "ru:pages.index.flows.settings",
+        "verification": "ru:pages.index.flows.verification"
+      },
+      "metadata": {
+        "description": "ru:pages.index.metadata.description",
+        "title": "ru:pages.index.metadata.title"
+      }
     }
   },
-  "login-flow": {
-    "metadata": {
-      "description": "TODO: ru - translate \"metadata.description\" in \"login-flow\"",
-      "title": "TODO: ru - translate \"metadata.title\" in \"login-flow\""
+  "components": {
+    "ory": {
+      "button": {
+        "submittingLabel": "ru:components.ory.button.submittingLabel"
+      },
+      "card": {
+        "flows": {
+          "login": {
+            "footer": {
+              "linkText": "ru:components.ory.card.flows.login.footer.linkText",
+              "text": "ru:components.ory.card.flows.login.footer.text"
+            },
+            "header": {
+              "description": "ru:components.ory.card.flows.login.header.description",
+              "title": "ru:components.ory.card.flows.login.header.title"
+            }
+          },
+          "oAuth2Consent": {
+            "header": {
+              "description": "ru:components.ory.card.flows.oAuth2Consent.header.description",
+              "title": "ru:components.ory.card.flows.oAuth2Consent.header.title"
+            }
+          },
+          "recovery": {
+            "footer": {
+              "linkText": "ru:components.ory.card.flows.recovery.footer.linkText",
+              "text": "ru:components.ory.card.flows.recovery.footer.text"
+            },
+            "header": {
+              "description": "ru:components.ory.card.flows.recovery.header.description",
+              "title": "ru:components.ory.card.flows.recovery.header.title"
+            }
+          },
+          "registration": {
+            "footer": {
+              "linkText": "ru:components.ory.card.flows.registration.footer.linkText",
+              "text": "ru:components.ory.card.flows.registration.footer.text"
+            },
+            "header": {
+              "description": "ru:components.ory.card.flows.registration.header.description",
+              "title": "ru:components.ory.card.flows.registration.header.title"
+            }
+          },
+          "settings": {
+            "header": {
+              "description": "ru:components.ory.card.flows.settings.header.description",
+              "title": "ru:components.ory.card.flows.settings.header.title"
+            }
+          },
+          "verification": {
+            "header": {
+              "description": "ru:components.ory.card.flows.verification.header.description",
+              "title": "ru:components.ory.card.flows.verification.header.title"
+            }
+          }
+        }
+      }
+    }
+  },
+  "identities": {
+    "messages": {
+      "1070002": "Эл. Почта"
     }
   }
 }
