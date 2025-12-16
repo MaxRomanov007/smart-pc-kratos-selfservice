@@ -15,12 +15,16 @@ export default function OryInput({
   const label = getNodeLabel(node);
   const { register } = useFormContext();
 
-  const {autocomplete, value, ...attributes} = uiAttributes;
-
-  console.log(register(attributes.name, { value }))
+  const { autocomplete, value, ...attributes } = uiAttributes;
 
   if (uiAttributes.name.endsWith("picture")) {
-    return <OryPictureInput src={value} {...attributes} {...register(attributes.name, { value })}/>;
+    return (
+      <OryPictureInput
+        node={node}
+        attributes={uiAttributes}
+        onClick={onClick}
+      />
+    );
   }
 
   if (attributes.type === "password") {

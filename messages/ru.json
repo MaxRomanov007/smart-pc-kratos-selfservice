@@ -75,6 +75,9 @@
             }
           }
         }
+      },
+      "picture-input": {
+        "help-text": "ru:components.ory.picture-input.help-text"
       }
     }
   },

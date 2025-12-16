@@ -4,8 +4,6 @@ import type { OryToastProps } from "@ory/elements-react";
 import { toaster } from "@/components/ui/chakra/toaster";
 
 export default function OryMessageToast({ message, id }: OryToastProps) {
-  console.log(id);
-
   switch (message.type) {
     case "error":
       toaster.error({

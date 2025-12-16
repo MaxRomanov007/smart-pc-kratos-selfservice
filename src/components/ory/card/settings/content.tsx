@@ -1,4 +1,4 @@
-import { Card } from "@chakra-ui/react";
+import { Card, Stack } from "@chakra-ui/react";
 import type { OryFormSectionContentProps } from "@ory/elements-react";
 
 export default function OryCardSettingsSectionContent({title, description, children}: OryFormSectionContentProps) {
@@ -10,7 +10,9 @@ export default function OryCardSettingsSectionContent({title, description, child
       </Card.Header>
 
       <Card.Body>
-        {children}
+        <Stack gap={2}>
+          {children}
+        </Stack>
       </Card.Body>
     </>
   );

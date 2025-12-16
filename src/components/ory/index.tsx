@@ -26,7 +26,6 @@ export const myCustomComponents: OryFlowComponentOverrides = {
     Label: OryLabel,
     CodeInput: OryPinCodeInput,
     Image: OryNodeImage,
-
   },
   Card: {
     Root: OryCardRoot,
@@ -39,6 +38,7 @@ export const myCustomComponents: OryFlowComponentOverrides = {
   },
   Form: {
     Group: OryFormGroup,
+
   },
   Message: {
     Toast: OryMessageToast,

@@ -75,6 +75,9 @@
             }
           }
         }
+      },
+      "picture-input": {
+        "help-text": "Choose images up to 3MB"
       }
     }
   }
