@@ -21,6 +21,7 @@ import OrySsoButton from "@/components/ory/card/sso-button";
 import OryFormSsoRoot from "@/components/ory/form/sso-root";
 import OryFormSsoSettings from "@/components/ory/form/sso-settings";
 import OryPageHeader from "@/components/ory/page/header";
+import OryConsentScopeCheckbox from "@/components/ory/node/consent-scope-checkbox";
 
 export const myCustomComponents: OryFlowComponentOverrides = {
   Node: {
@@ -31,6 +32,7 @@ export const myCustomComponents: OryFlowComponentOverrides = {
     CodeInput: OryPinCodeInput,
     Image: OryNodeImage,
     SsoButton: OrySsoButton,
+    ConsentScopeCheckbox: OryConsentScopeCheckbox,
   },
   Card: {
     Root: OryCardRoot,
