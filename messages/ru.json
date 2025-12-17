@@ -76,6 +76,12 @@
           }
         }
       },
+      "page": {
+        "header": {
+          "go-back-link": "ru:components.ory.page.header.go-back-link",
+          "logout-link": "ru:components.ory.page.header.logout-link"
+        }
+      },
       "picture-input": {
         "help-text": "ru:components.ory.picture-input.help-text"
       }

@@ -1,6 +1,6 @@
 "use client";
 
-import type { OryFlowComponentOverrides } from "@ory/elements-react";
+import { type OryFlowComponentOverrides } from "@ory/elements-react";
 import OryButton from "@/components/ory/node/button";
 import OryInput from "@/components/ory/node/input";
 import OryLabel from "@/components/ory/node/label";
@@ -17,6 +17,10 @@ import OryCardSettingsSection from "@/components/ory/card/settings/section";
 import OryCardSettingsSectionContent from "@/components/ory/card/settings/content";
 import OryCardSettingsSectionFooter from "@/components/ory/card/settings/footer";
 import OryNodeImage from "@/components/ory/node/image";
+import OrySsoButton from "@/components/ory/card/sso-button";
+import OryFormSsoRoot from "@/components/ory/form/sso-root";
+import OryFormSsoSettings from "@/components/ory/form/sso-settings";
+import OryPageHeader from "@/components/ory/page/header";
 
 export const myCustomComponents: OryFlowComponentOverrides = {
   Node: {
@@ -26,6 +30,7 @@ export const myCustomComponents: OryFlowComponentOverrides = {
     Label: OryLabel,
     CodeInput: OryPinCodeInput,
     Image: OryNodeImage,
+    SsoButton: OrySsoButton,
   },
   Card: {
     Root: OryCardRoot,
@@ -38,10 +43,14 @@ export const myCustomComponents: OryFlowComponentOverrides = {
   },
   Form: {
     Group: OryFormGroup,
-
+    SsoRoot: OryFormSsoRoot,
+    SsoSettings: OryFormSsoSettings,
   },
   Message: {
     Toast: OryMessageToast,
     Content: OryMessageContent,
+  },
+  Page: {
+    Header: OryPageHeader,
   },
 };

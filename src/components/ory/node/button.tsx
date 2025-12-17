@@ -1,17 +1,23 @@
 "use client";
 
 import { type OryNodeButtonProps } from "@ory/elements-react";
-import { useEffect, useState } from "react";
 import { getNodeLabel } from "@ory/client-fetch";
 import { Button } from "@chakra-ui/react";
 import { useTranslations } from "next-intl";
 import { useFormContext } from "react-hook-form";
 
+interface Props extends OryNodeButtonProps {
+  w?: "wide" | "shy"
+  variant?: "ordinary" | "danger"
+}
+
 export default function OryButton({
   node,
   attributes,
   onClick,
-}: OryNodeButtonProps) {
+  w = "wide",
+  variant = "ordinary",
+}: Props) {
   const { type, name, value, ...rest } = attributes;
   const {
     formState: { isSubmitting, isReady },
@@ -30,15 +36,14 @@ export default function OryButton({
   return (
     <Button
       loading={isSubmitting}
-      w="full"
+      w={w === "wide" ? "full" : "auto"}
       variant={isPrimary ? "solid" : "outline"}
       type={type === "button" ? "button" : "submit"}
       value={value}
+      colorPalette={variant === "danger" ? "red" : undefined}
       name={name}
       onClick={(e) => {
         onClick?.(e);
-
-        console.log(onClick);
 
         if (type !== "button") {
           setValue(name, value);

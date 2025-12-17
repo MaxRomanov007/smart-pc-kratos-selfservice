@@ -1,0 +1,31 @@
+import { useCallback, useEffect, useState } from "react";
+import type { LogoutFlow } from "@ory/client-fetch";
+import { frontendClient } from "@/utils/ory/client";
+
+export function useClientLogout(config: { sdk: { url: string } }) {
+  const [logoutFlow, setLogoutFlow] = useState<LogoutFlow | undefined>()
+  const [isLoading, setIsLoading] = useState<boolean>(true)
+
+  const fetchLogoutFlow = useCallback(async () => {
+    try {
+      const flow = await frontendClient(config.sdk.url)
+        .createBrowserLogoutFlow()
+        .catch((err) => {
+          // We ignore errors that are thrown because the user is not signed in.
+          if (err.response?.status !== 401) {
+            throw err
+          }
+          return undefined
+        })
+      setLogoutFlow(flow)
+    } finally {
+      setIsLoading(false)
+    }
+  }, [config.sdk.url])
+
+  useEffect(() => {
+    void fetchLogoutFlow()
+  }, [fetchLogoutFlow])
+
+  return { logoutFlow, didLoad: !isLoading }
+}
