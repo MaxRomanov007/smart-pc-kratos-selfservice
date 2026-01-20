@@ -1,21 +1,9 @@
 import { Configuration, OAuth2Api } from "@ory/client-fetch";
-import {
-  Button,
-  Card,
-  Container,
-  Grid,
-  List,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
-import LinkButton from "@/components/ui/buttons/link-button";
-import { PAGES } from "@/shared/constants/pages";
-import LogoutLink from "@/components/ui/link/logout-link";
-import Form from "next/form";
+import { Button, Card, Container, Grid, List } from "@chakra-ui/react";
 
 const ory = new OAuth2Api(
   new Configuration({
-    basePath: `http://localhost:4445`,
+    basePath: process.env.HYDRA_ADMIN_URL,
   }),
 );
 
@@ -43,14 +31,14 @@ export default async function Page({
       <Card.Root w="full">
         <Card.Header>
           <Card.Title>Are you sure?</Card.Title>
-          <Card.Description>Are you sure that you want to access service {clientName} to use</Card.Description>
+          <Card.Description>
+            Are you sure that you want to access service {clientName} to use
+          </Card.Description>
         </Card.Header>
         <Card.Body>
           <List.Root w="full" gap="4" ml={5}>
             {consentRequest.requested_scope?.map((scope) => (
-              <List.Item key={scope}>
-                {scope}
-              </List.Item>
+              <List.Item key={scope}>{scope}</List.Item>
             ))}
           </List.Root>
         </Card.Body>
@@ -62,18 +50,10 @@ export default async function Page({
               value={consentChallenge}
             />
             <Grid templateColumns="repeat(2, 1fr)" gap={4}>
-              <Button
-                type="submit"
-                name="submit"
-                value="accept"
-              >
+              <Button type="submit" name="submit" value="accept">
                 Accept
               </Button>
-              <Button
-                type="submit"
-                name="submit"
-                value="reject"
-              >
+              <Button type="submit" name="submit" value="reject">
                 Reject
               </Button>
             </Grid>
@@ -81,5 +61,5 @@ export default async function Page({
         </Card.Footer>
       </Card.Root>
     </Container>
-  )
+  );
 }

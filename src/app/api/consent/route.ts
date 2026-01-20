@@ -4,7 +4,7 @@ import { getServerSession } from "@ory/nextjs/app";
 
 const hydraAdmin = new OAuth2Api(
   new Configuration({
-    basePath: `http://localhost:4445`,
+    basePath: process.env.HYDRA_ADMIN_URL,
   }),
 );
 

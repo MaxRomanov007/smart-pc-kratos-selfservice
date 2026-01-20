@@ -70,8 +70,8 @@
           },
           "verification": {
             "header": {
-              "description": "ory.card.flows.verification.header.description",
-              "title": "ory.card.flows.verification.header.title"
+              "description": "Verify your email",
+              "title": "Verification"
             }
           }
         }
