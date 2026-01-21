@@ -6,9 +6,9 @@ import i18nextPlugin from "eslint-plugin-i18next";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
-  // Override default ignores of eslint-config-next.
+  // Override default ignores of eslint-configs-next.
   globalIgnores([
-    // Default ignores of eslint-config-next:
+    // Default ignores of eslint-configs-next:
     ".next/**",
     "out/**",
     "build/**",

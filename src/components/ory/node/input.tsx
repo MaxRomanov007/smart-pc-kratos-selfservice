@@ -6,6 +6,7 @@ import { getNodeLabel } from "@ory/client-fetch";
 import type { OryNodeInputProps } from "@ory/elements-react";
 import { useFormContext } from "react-hook-form";
 import OryPictureInput from "@/components/ory/node/picture-input";
+import { useSession } from "@ory/elements-react/client";
 
 export default function OryInput({
   node,
@@ -13,9 +14,18 @@ export default function OryInput({
   onClick,
 }: OryNodeInputProps) {
   const label = getNodeLabel(node);
-  const { register } = useFormContext();
+  const { register, setValue } = useFormContext();
+  const session = useSession();
 
   const { autocomplete, value, ...attributes } = uiAttributes;
+
+  if (node.group === "code" && attributes.type === "email") {
+    setValue(
+      attributes.name,
+      session.session?.identity?.verifiable_addresses?.find((a) => !a.verified)
+        ?.value,
+    );
+  }
 
   if (uiAttributes.name.endsWith("picture")) {
     return (

@@ -5,9 +5,10 @@ export type UploadResponse = {
   fileName: string;
 };
 
-const address = process.env.NEXT_PUBLIC_FILE_SERVER_ADDRESS
-const user = process.env.NEXT_PUBLIC_FILE_SERVER_USER
-const password = process.env.NEXT_PUBLIC_FILE_SERVER_PASSWORD
+const address = process.env.FILE_SERVER_ADDRESS
+const browserAddress = process.env.FILE_SERVER_BROWSER_ADDRESS
+const user = process.env.FILE_SERVER_USER
+const password = process.env.FILE_SERVER_PASSWORD
 
 export async function uploadFileToServer(file: File): Promise<string> {
   const formData = new FormData();
@@ -27,13 +28,14 @@ export async function uploadFileToServer(file: File): Promise<string> {
     .then((res) => res.json())
     .then((data) => data as UploadResponse);
 
-  return `${address}/${response.fileName}`;
+  return `${browserAddress}/${response.fileName}`;
 }
 
 export async function deleteFileByURL(url: string) {
   console.debug("deleteFileByURL", url);
 
   if (
+    !url ||
     !address ||
     !url.startsWith(address)
   ) {
