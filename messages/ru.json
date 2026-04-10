@@ -2,94 +2,94 @@
   "pages": {
     "index": {
       "card": {
-        "description": "ru:pages.index.card.description",
-        "title": "ru:pages.index.card.title"
+        "description": "Проверка потоков пользователей",
+        "title": "Потоки пользователей"
       },
       "flows": {
-        "login": "ru:pages.index.flows.login",
-        "logout": "ru:pages.index.flows.logout",
-        "recovery": "ru:pages.index.flows.recovery",
-        "registration": "ru:pages.index.flows.registration",
-        "settings": "ru:pages.index.flows.settings",
-        "verification": "ru:pages.index.flows.verification"
+        "login": "Вход",
+        "logout": "Выход",
+        "recovery": "Восстановление",
+        "registration": "Регистрация",
+        "settings": "Настройки",
+        "verification": "Подтверждение"
       },
       "metadata": {
-        "description": "ru:pages.index.metadata.description",
-        "title": "ru:pages.index.metadata.title"
+        "description": "Обзор всех потоков аутентификации",
+        "title": "Панель аутентификации"
       }
     }
   },
   "components": {
     "ory": {
       "button": {
-        "submittingLabel": "ru:components.ory.button.submittingLabel"
+        "submittingLabel": "Отправка..."
       },
       "card": {
         "flows": {
           "login": {
             "footer": {
-              "linkText": "ru:components.ory.card.flows.login.footer.linkText",
-              "text": "ru:components.ory.card.flows.login.footer.text"
+              "linkText": "Зарегистрироваться",
+              "text": "Нет аккаунта?"
             },
             "header": {
-              "description": "ru:components.ory.card.flows.login.header.description",
-              "title": "ru:components.ory.card.flows.login.header.title"
+              "description": "Войдите в свой аккаунт",
+              "title": "Вход"
             }
           },
           "oAuth2Consent": {
             "header": {
-              "description": "ru:components.ory.card.flows.oAuth2Consent.header.description",
-              "title": "ru:components.ory.card.flows.oAuth2Consent.header.title"
+              "description": "Просмотрите и подтвердите запрошенные разрешения",
+              "title": "Подтверждение доступа (OAuth2)"
             }
           },
           "recovery": {
             "footer": {
-              "linkText": "ru:components.ory.card.flows.recovery.footer.linkText",
-              "text": "ru:components.ory.card.flows.recovery.footer.text"
+              "linkText": "Вернуться ко входу",
+              "text": "Вспомнили пароль?"
             },
             "header": {
-              "description": "ru:components.ory.card.flows.recovery.header.description",
-              "title": "ru:components.ory.card.flows.recovery.header.title"
+              "description": "Введите email для сброса пароля",
+              "title": "Восстановление аккаунта"
             }
           },
           "registration": {
             "footer": {
-              "linkText": "ru:components.ory.card.flows.registration.footer.linkText",
-              "text": "ru:components.ory.card.flows.registration.footer.text"
+              "linkText": "Войти",
+              "text": "Уже есть аккаунт?"
             },
             "header": {
-              "description": "ru:components.ory.card.flows.registration.header.description",
-              "title": "ru:components.ory.card.flows.registration.header.title"
+              "description": "Заполните данные для создания аккаунта",
+              "title": "Регистрация"
             }
           },
           "settings": {
             "header": {
-              "description": "ru:components.ory.card.flows.settings.header.description",
-              "title": "ru:components.ory.card.flows.settings.header.title"
+              "description": "Обновите профиль и параметры",
+              "title": "Настройки"
             }
           },
           "verification": {
             "header": {
-              "description": "ru:components.ory.card.flows.verification.header.description",
-              "title": "ru:components.ory.card.flows.verification.header.title"
+              "description": "Подтвердите адрес электронной почты",
+              "title": "Подтверждение"
             }
           }
         }
       },
       "page": {
         "header": {
-          "go-back-link": "ru:components.ory.page.header.go-back-link",
-          "logout-link": "ru:components.ory.page.header.logout-link"
+          "go-back-link": "Назад",
+          "logout-link": "Выйти"
         }
       },
       "picture-input": {
-        "help-text": "ru:components.ory.picture-input.help-text"
+        "help-text": "Выберите изображения размером до 3 МБ"
       }
     }
   },
   "identities": {
     "messages": {
-      "1070002": "Эл. Почта"
+      "1070002": "Эл. почта"
     }
   }
 }

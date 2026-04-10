@@ -14,15 +14,15 @@
         "verification": "Verification"
       },
       "metadata": {
-        "description": "index.metadata.description",
-        "title": "index.metadata.title"
+        "description": "Overview of all authentication user flows",
+        "title": "Authentication Dashboard"
       }
     }
   },
   "components": {
     "ory": {
       "button": {
-        "submittingLabel": "ory.button.submittingLabel"
+        "submittingLabel": "Submitting..."
       },
       "card": {
         "flows": {
@@ -38,18 +38,18 @@
           },
           "oAuth2Consent": {
             "header": {
-              "description": "ory.card.flows.oAuth2Consent.header.description",
-              "title": "ory.card.flows.oAuth2Consent.header.title"
+              "description": "Review and approve requested permissions",
+              "title": "OAuth2 Consent"
             }
           },
           "recovery": {
             "footer": {
-              "linkText": "ory.card.flows.recovery.footer.linkText",
-              "text": "ory.card.flows.recovery.footer.text"
+              "linkText": "Back to login",
+              "text": "Remembered your password?"
             },
             "header": {
-              "description": "ory.card.flows.recovery.header.description",
-              "title": "ory.card.flows.recovery.header.title"
+              "description": "Enter your email to reset your password",
+              "title": "Recover Account"
             }
           },
           "registration": {
@@ -58,14 +58,14 @@
               "text": "Already have an account?"
             },
             "header": {
-              "description": "ory.card.flows.registration.header.description",
-              "title": "ory.card.flows.registration.header.title"
+              "description": "Fill in your details to create an account",
+              "title": "Sign Up"
             }
           },
           "settings": {
             "header": {
-              "description": "ory.card.flows.settings.header.description",
-              "title": "ory.card.flows.settings.header.title"
+              "description": "Update your profile and preferences",
+              "title": "Settings"
             }
           },
           "verification": {
