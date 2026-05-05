@@ -8,12 +8,13 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       new URL("https://cdn.pixabay.com/**"),
       new URL("https://lh3.googleusercontent.com/**"),
-      new URL("http://localhost:9000/**")
-    ]
+      new URL("http://localhost:9000/**"),
+      new URL("https://files.smartpc.site/**"),
+    ],
   },
   experimental: {
     serverActions: {
-      bodySizeLimit: '3mb',
+      bodySizeLimit: "3mb",
     },
   },
 };
