@@ -1,32 +1,27 @@
 "use client";
 
+import { useState } from "react";
 import { useFormContext } from "react-hook-form";
 import type { OryNodeInputProps } from "@ory/elements-react";
 import { PinInput } from "@chakra-ui/react";
 
 export default function OryPinCodeInput({ attributes }: OryNodeInputProps) {
-  const { setValue, watch } = useFormContext();
+  const { setValue } = useFormContext();
   const { maxlength, name } = attributes;
   const elements = maxlength ?? 6;
 
-  const rawValue = watch(name); // Это может быть string, string[], или undefined
-
-  // Преобразуем строку в массив символов, если нужно
-  const value = typeof rawValue === "string"
-    ? rawValue.split("")
-    : Array.isArray(rawValue)
-      ? rawValue
-      : [];
+  const [pinValue, setPinValue] = useState<string[]>(Array(elements).fill(""));
 
   const handleInputChange = ({ value }: { value: string[] }) => {
-    setValue(name, value.join("")); // Сохраняем как строку — как ожидает Kratos
+    setPinValue(value);
+    setValue(name, value.join(""), { shouldValidate: true });
   };
 
   return (
     <PinInput.Root
       onValueChange={handleInputChange}
       name={name}
-      value={value}
+      value={pinValue}
       attached
     >
       <PinInput.HiddenInput />
